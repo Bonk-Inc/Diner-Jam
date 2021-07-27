@@ -9,29 +9,22 @@ public abstract class Ingredient : MonoBehaviour
 
     [SerializeField]
     private IngredientType type;
-    
+
     protected bool Equals(Ingredient other)
     {
-        return base.Equals(other) && name == other.name && type == other.type;
+        return name == other.name;
     }
 
     public override bool Equals(object obj)
     {
         if (ReferenceEquals(null, obj)) return false;
         if (ReferenceEquals(this, obj)) return true;
-        if (obj.GetType() != GetType()) return false;
         
-        return Equals((Ingredient) obj);
+        return obj.GetType() == GetType() && Equals((Ingredient) obj);
     }
 
     public override int GetHashCode()
     {
-        unchecked
-        {
-            int hashCode = base.GetHashCode();
-            hashCode = (hashCode * 397) ^ (name != null ? name.GetHashCode() : 0);
-            hashCode = (hashCode * 397) ^ (int) type;
-            return hashCode;
-        }
+        return name.GetHashCode();
     }
 }
