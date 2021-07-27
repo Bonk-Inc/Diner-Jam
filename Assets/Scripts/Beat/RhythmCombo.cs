@@ -19,5 +19,10 @@ public class RhythmCombo
     {
 
     }
+
+    public void ResetCombo()
+    {
+        currentPiece = order[0];
+    }
     
 }
