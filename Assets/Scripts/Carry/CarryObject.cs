@@ -1,0 +1,69 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CarryObject : MonoBehaviour
+{
+    [SerializeField] private GameobjectMap gameobjectMap;
+    [SerializeField] private GridPosition gridPosition;
+    [SerializeField] private Transform interaction;
+    private Vector3 offset = new Vector3(0.5f, 0.5f, -0.5f);
+    private GameObject carrying;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (carrying != null)
+            {
+                Drop();
+            }
+            else
+            {
+                PickUp();
+            }
+        }
+    }
+
+    public void PickUp()
+    {
+        //get position to pick up from //player position or player position + player.forward
+        Vector2Int position = gridPosition.Position + Vector2Int.down;
+
+        //check if object on position
+        GameObject objectOnPosition = gameobjectMap.GetCell(position);
+        if (objectOnPosition != null /* && objectOnPosition.GetComponent<Carryable>() != null */)
+        {
+            //remember what you are carrying
+            carrying = gameobjectMap.GetCell(position);
+            //remove from grid
+            gameobjectMap.Remove(position);
+            //set player as parent
+            carrying.transform.SetParent(transform);
+            //move to player animation?
+            ///////////////////////////////////////carrying.transform.position = new Vector3(gridPosition.Position.x, gridPosition.Position.y, -0.5f);
+        }
+    }
+
+    public void Drop()
+    {
+        //get position to drop //player position or player position + player.forward
+        Vector2Int position = gridPosition.Position + Vector2Int.down;
+
+        //check if object on position
+        GameObject objectOnPosition = gameobjectMap.GetCell(position);
+        if (objectOnPosition == null)
+        {
+            //remove player as parent
+            carrying.transform.SetParent(interaction);
+            //add to grid
+            gameobjectMap.Add(carrying, position);
+            //move to location animation?
+            carrying.transform.position = new Vector3(position.x, position.y, 0) + offset;
+            //forget what you were carrying
+            carrying = null;
+
+        }
+
+    }
+}
