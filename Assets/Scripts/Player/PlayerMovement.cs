@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private GridPosition gridPosition;
+    private GameobjectMap map;
     private Animator animator;
     
     private void Awake()
@@ -14,14 +15,23 @@ public class PlayerMovement : MonoBehaviour
         gridPosition = GetComponent<GridPosition>();
     }
 
+    public void SetMap(GameobjectMap map)
+    {
+        this.map = map;
+    }
+
     public void Move(MoveDirection direction)
     {
         Vector2Int desiredChange = GetDesiredChange(direction);
         Vector2Int desiredPosition = gridPosition.Position + desiredChange;
-        animator.SetTrigger("Move");
-
+        
         transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, desiredChange));
-        gridPosition.SetPosition(desiredPosition);
+
+        if (map.GetCell(desiredPosition) == null)
+        {
+            animator.SetTrigger("Move");
+            gridPosition.SetPosition(desiredPosition);
+        }
     }
 
     private Vector2Int GetDesiredChange(MoveDirection direction)

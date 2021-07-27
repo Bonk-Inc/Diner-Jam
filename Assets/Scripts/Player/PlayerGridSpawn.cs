@@ -9,6 +9,9 @@ public class PlayerGridSpawn : MonoBehaviour
     private Grid grid;
 
     [SerializeField]
+    private GameobjectMap map;
+
+    [SerializeField]
     private Vector2Int spawnCell;
 
     [SerializeField]
@@ -22,6 +25,9 @@ public class PlayerGridSpawn : MonoBehaviour
         GridPosition gridPosition = player.GetComponent<GridPosition>();
         gridPosition.Grid = grid;
         gridPosition.SetPosition(spawnCell, true);
+
+        PlayerMovement movement = player.GetComponent<PlayerMovement>();
+        movement.SetMap(map);
     }
 
     private void OnDrawGizmos()
