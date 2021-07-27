@@ -10,22 +10,7 @@ public abstract class Dish : MonoBehaviour
 
     [SerializeField]
     protected List<Ingredient> requiredItems = new List<Ingredient>();
-
-    [SerializeField] 
-    private Apple preApple;
-
-    [SerializeField]
-    private Sugar preSugar;
-
-    private void Start()
-    {
-        Apple apple = Instantiate(preApple, transform);
-        Sugar sugar = Instantiate(preSugar, transform);
-     
-        AddGatheredItem(apple);
-        AddGatheredItem(sugar);
-    }
-
+    
     public void AddGatheredItem(Ingredient collectedIngredient)
     {
         Ingredient ingredientInList = requiredItems.Find(i => i.GetType() == collectedIngredient.GetType());
