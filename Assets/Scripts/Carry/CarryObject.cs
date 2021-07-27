@@ -4,11 +4,45 @@ using UnityEngine;
 
 public class CarryObject : MonoBehaviour
 {
-    [SerializeField] private GameobjectMap gameobjectMap;
-    [SerializeField] private GridPosition gridPosition;
-    [SerializeField] private Transform interaction;
+    private GameobjectMap gameobjectMap;
+    private GridPosition gridPosition;
+    private Transform interaction;
     private Vector3 offset = new Vector3(0.5f, 0.5f, -0.5f);
     private GameObject carrying;
+    private PlayerMovement playerMovement;
+
+    private void Start()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+        gridPosition = GetComponent<GridPosition>();
+    }
+
+    public GameobjectMap GameobjectMap
+    {
+        get => gameobjectMap;
+        set => SetGameobjectMap(value);
+    }
+
+    public Transform Interaction
+    {
+        get => interaction;
+        set => SetInteraction(value);
+    }
+
+    private void SetGameobjectMap(GameobjectMap newGameobjectMap)
+    {
+        gameobjectMap = newGameobjectMap;
+    }
+
+    private void SetGridPosition(GridPosition newGridPosition)
+    {
+        gridPosition = newGridPosition;
+    }
+
+    private void SetInteraction(Transform newInteraction)
+    {
+        interaction = newInteraction;
+    }
 
     private void Update()
     {
@@ -28,7 +62,7 @@ public class CarryObject : MonoBehaviour
     public void PickUp()
     {
         //get position to pick up from //player position or player position + player.forward
-        Vector2Int position = gridPosition.Position + Vector2Int.down;
+        Vector2Int position = gridPosition.Position + playerMovement.LookingAt;
 
         //check if object on position
         GameObject objectOnPosition = gameobjectMap.GetCell(position);
@@ -48,7 +82,7 @@ public class CarryObject : MonoBehaviour
     public void Drop()
     {
         //get position to drop //player position or player position + player.forward
-        Vector2Int position = gridPosition.Position + Vector2Int.down;
+        Vector2Int position = gridPosition.Position + playerMovement.LookingAt;
 
         //check if object on position
         GameObject objectOnPosition = gameobjectMap.GetCell(position);
