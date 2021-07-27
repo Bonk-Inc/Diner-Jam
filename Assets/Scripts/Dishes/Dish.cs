@@ -10,14 +10,19 @@ public abstract class Dish : MonoBehaviour
 
     [SerializeField]
     protected List<Ingredient> requiredItems = new List<Ingredient>();
-    
-    public void AddGatheredItem(Ingredient collectedIngredient)
+
+    public bool AddGatheredItem(Ingredient collectedIngredient)
     {
         Ingredient ingredientInList = requiredItems.Find(i => i.GetType() == collectedIngredient.GetType());
+        
+        if (null == ingredientInList)
+            return false;
+        
         requiredItems.Remove(ingredientInList);
-
-        if (requiredItems.Count > 0)
+        if (requiredItems.Count == 0)
             CreateDish();
+
+        return true;
     }
 
     protected abstract void CreateDish();
