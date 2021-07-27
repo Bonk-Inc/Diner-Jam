@@ -299,6 +299,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1059658987 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1964638948444906579, guid: 1a3930e53f85aa4bab8671eea16ec30b, type: 3}
+  m_PrefabInstance: {fileID: 4808266113520113061}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b559042ff8134066a5748723d58c7cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1569985228
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,8 +408,9 @@ MonoBehaviour:
   name: Appel Juice
   requiredItems:
   - {fileID: 2051069631}
-  - {fileID: 2051069631}
+  - {fileID: 1059658987}
   preApple: {fileID: 2051069631}
+  preSugar: {fileID: 1059658987}
 --- !u!114 &2051069631 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4955802762961512374, guid: 7fb6af2ecf83f7ef39223eed0d55ad8a, type: 3}
