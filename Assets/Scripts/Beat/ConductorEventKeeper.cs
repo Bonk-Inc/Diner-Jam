@@ -16,7 +16,8 @@ public class ConductorEventKeeper : MonoBehaviour
     {
         foreach (RhythmCombo combo in comboOrder)
         {
-            combo.CheckCombo();
+            if(combo.inputRequired)
+                combo.InputCheck();
         }
     }
 
@@ -35,7 +36,7 @@ public class ConductorEventKeeper : MonoBehaviour
     {
         foreach (RhythmCombo combo in comboOrder)
         {
-            combo.waitForMeasure = false;
+            combo.CheckCombo();
         }
     }
 }

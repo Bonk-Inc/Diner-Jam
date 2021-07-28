@@ -10,13 +10,14 @@ public class RhythmCombo
     public string description;
 
     public event Action ComboFinished;
-    public bool active, waitForMeasure;
+    public bool active, waitForMeasure, inputRequired;
 
     public List<RhythmComboPiece> order;
 
     public RhythmComboPiece toDeactivate;
 
-    private int currentPiece = 0;
+    private int currentPieceNumber = 0;
+    private RhythmComboPiece currentPiece;
 
     public void ComboUsed()
     {
@@ -25,71 +26,85 @@ public class RhythmCombo
 
     public void CheckCombo()
     {
-
-        RhythmComboPiece piece;
         if (active)
         {
-            piece = toDeactivate;
+            currentPiece = toDeactivate;
         }
         else
         {
-            if (waitForMeasure)
-                return;
-            piece = order[currentPiece];
+            //if (waitForMeasure)
+            //    return;
+            currentPiece = order[currentPieceNumber];
         }
 
 
-        if(piece.bpmPosition.Length == 0 && piece.measurePosition.Length == 0)
+        if(currentPiece.bpmPosition.Length == 0 && currentPiece.measurePosition.Length == 0)
         {
-            throw new Exception("Combo " + name + " has no bpmPositions nor measurePositions in piece " + currentPiece +
+            throw new Exception("Combo " + name + " has no bpmPositions nor measurePositions in piece " + currentPieceNumber +
                 ", Should always have atleast one!");
         }
 
-        BPMPositionCheck(piece);
+        BPMPositionCheck();
     }
 
-    private void BPMPositionCheck(RhythmComboPiece piece)
+    private void BPMPositionCheck()
     {
-        if (piece.bpmPosition.Length > 0)
+        if (currentPiece.bpmPosition.Length > 0)
         {
             int currentPosition = Mathf.FloorToInt(Conductor.RhythmConductor.SongPosition);
-            foreach (int position in piece.bpmPosition)
+            foreach (int position in currentPiece.bpmPosition)
             {
                 if (currentPosition == position)
-                    MeasureCheck(piece);
+                    MeasureCheck();
             }
         }
         else
         {
-            MeasureCheck(piece);
+            MeasureCheck();
         }
     }
 
-    private void MeasureCheck(RhythmComboPiece piece)
+    private void MeasureCheck()
     {
-        if (piece.measurePosition.Length > 0)
+        if (currentPiece.measurePosition.Length > 0)
         {
             int currentPosition = Conductor.RhythmConductor.MeasurePosition;
-            foreach (int position in piece.measurePosition)
+            foreach (int position in currentPiece.measurePosition)
             {
                 if (currentPosition == position)
                 {
-
-                    InputCheck(piece);
+                    if (currentPiece.keycodes.Length > 0)
+                    {
+                        inputRequired = true;
+                        InputCheck();
+                    }
+                    else
+                        ContinueCombo();
                 }
             }
         }
         else
         {
-            InputCheck(piece);
+            if (currentPiece.keycodes.Length > 0)
+            {
+                inputRequired = true;
+                InputCheck();
+            }
+            else
+                ContinueCombo();
         }
     }
 
-    private void InputCheck(RhythmComboPiece piece)
+    public void InputCheck()
     {
         // TODO: Actual Input checks
+        inputRequired = false;
+        ContinueCombo();
+    }
 
-        if(currentPiece + 1 >= order.Count)
+    private void ContinueCombo()
+    {
+        if (currentPieceNumber + 1 >= order.Count)
         {
             Debug.Log(name + " has been complete!");
             if (ComboFinished != null)
@@ -101,13 +116,13 @@ public class RhythmCombo
         }
         else
         {
-            currentPiece += 1;
+            currentPieceNumber += 1;
         }
     }
 
     public void ResetCombo()
     {
-        currentPiece = 0;
+        currentPieceNumber = 0;
     }
     
 }
