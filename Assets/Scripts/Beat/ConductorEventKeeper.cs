@@ -7,6 +7,11 @@ public class ConductorEventKeeper : MonoBehaviour
     [SerializeField]
     private List<RhythmCombo> comboOrder;
 
+    private void Start()
+    {
+        Conductor.RhythmConductor.OnMeasureChange += CheckNewMeasure;
+    }
+
     private void Update()
     {
         foreach (RhythmCombo combo in comboOrder)
@@ -24,5 +29,13 @@ public class ConductorEventKeeper : MonoBehaviour
                 return combo;
         }
         return null;
+    }
+
+    private void CheckNewMeasure()
+    {
+        foreach (RhythmCombo combo in comboOrder)
+        {
+            combo.waitForMeasure = false;
+        }
     }
 }

@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Conductor : MonoBehaviour
 {
+
+    public event Action OnMeasureChange;
+
     [SerializeField]
     private AudioSource audio;
 
@@ -20,7 +24,13 @@ public class Conductor : MonoBehaviour
     [SerializeField]
     private float startTime; // The dsp time when we start our song, since this could be a high number when the game starts.
 
+    private int previousMeasurePosition = 0;
+
     public static Conductor RhythmConductor;
+
+    public float Crotchet => crotchet;
+    public float SongPosition => songPosition;
+    public int MeasurePosition => measurePosition;
 
     private void Awake()
     {
@@ -43,5 +53,12 @@ public class Conductor : MonoBehaviour
     {
         songPosition = (float)(AudioSettings.dspTime - startTime) * audio.pitch - offset;
         measurePosition = Mathf.FloorToInt(1 + ((songPosition / crotchet) * 2) % 8);
+
+        if (OnMeasureChange != null && previousMeasurePosition != measurePosition)
+        {
+            OnMeasureChange.Invoke();
+        }
+
+        previousMeasurePosition = measurePosition;
     }
 }
