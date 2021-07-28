@@ -9,6 +9,9 @@ public class PlayerGridSpawn : MonoBehaviour
     private Grid grid;
 
     [SerializeField]
+    private ConductorEventKeeper eventKeeper;
+
+    [SerializeField]
     private GameobjectMap map;
 
     [SerializeField]
@@ -28,6 +31,9 @@ public class PlayerGridSpawn : MonoBehaviour
 
         PlayerMovement movement = player.GetComponent<PlayerMovement>();
         movement.SetMap(map);
+
+        PlayerMovementInput input = player.GetComponent<PlayerMovementInput>();
+        input.Combo = eventKeeper.FindCombo("Off-beat");
     }
 
     private void OnDrawGizmos()

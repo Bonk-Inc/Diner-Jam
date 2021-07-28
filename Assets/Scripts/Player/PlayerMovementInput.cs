@@ -7,6 +7,10 @@ public class PlayerMovementInput : MonoBehaviour
 
     private PlayerMovement mover;
 
+    private RhythmCombo combo;
+
+    public RhythmCombo Combo { set => combo = value; }
+
     private void Awake()
     {
         mover = GetComponent<PlayerMovement>();
@@ -21,8 +25,11 @@ public class PlayerMovementInput : MonoBehaviour
             return;
         }
 
-        //TODO Check if input is given at the right moment
-        mover.Move(direction);
+        if (combo.active)
+        {
+            combo.ComboUsed();
+            mover.Move(direction);
+        }
 
         //TODO else punish?
 
