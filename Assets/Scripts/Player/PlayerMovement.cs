@@ -8,7 +8,9 @@ public class PlayerMovement : MonoBehaviour
     private GridPosition gridPosition;
     private GameobjectMap map;
     private Animator animator;
-    
+
+    public Vector2Int LookingAt { get; private set; }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -22,10 +24,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(MoveDirection direction)
     {
-        Vector2Int desiredChange = GetDesiredChange(direction);
-        Vector2Int desiredPosition = gridPosition.Position + desiredChange;
+        LookingAt = GetDesiredChange(direction);
+        Vector2Int desiredPosition = gridPosition.Position + LookingAt;
         
-        transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, desiredChange));
+        transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, LookingAt));
 
         if (map.GetCell(desiredPosition) == null)
         {
