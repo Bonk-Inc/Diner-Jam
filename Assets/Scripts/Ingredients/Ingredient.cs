@@ -4,17 +4,16 @@ using UnityEngine;
 
 public abstract class Ingredient : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] 
     private string name;
 
-    [SerializeField]
-    private IngredientType type;
-
+    public string Name => name;
+    
     protected bool Equals(Ingredient other)
     {
         return name == other.name;
     }
-
+    
     public override bool Equals(object obj)
     {
         if (ReferenceEquals(null, obj)) return false;
