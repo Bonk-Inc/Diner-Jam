@@ -3,16 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Dish : MonoBehaviour
+public class Dish : MonoBehaviour
 {
     [SerializeField]
-    protected string name;
-
-    [SerializeField]
-    protected List<string> requiredItems = new List<string>();
-
+    private DishInfo dishValues;
+    
     public bool AddGatheredItem(Ingredient collectedIngredient)
     {
+        List<string> requiredItems = dishValues.RequiredItems;
         string ingredientInList = requiredItems.Find(i => i == collectedIngredient.Name);
         
         if (null == ingredientInList)
@@ -25,5 +23,8 @@ public abstract class Dish : MonoBehaviour
         return true;
     }
 
-    protected abstract void CreateDish();
+    private void CreateDish()
+    {
+        print(dishValues.Name);   
+    }
 }
