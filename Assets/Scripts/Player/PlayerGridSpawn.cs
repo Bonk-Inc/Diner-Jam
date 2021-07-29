@@ -20,6 +20,9 @@ public class PlayerGridSpawn : MonoBehaviour
     [SerializeField]
     private GameObject playerPrefab;
 
+    [SerializeField]
+    private string movementCombo;
+
     private void Start()
     {
         GameObject player = Instantiate(playerPrefab);
@@ -37,7 +40,7 @@ public class PlayerGridSpawn : MonoBehaviour
         carryObject.Interaction = map.transform;
 
         PlayerMovementInput input = player.GetComponent<PlayerMovementInput>();
-        input.Combo = eventKeeper.FindCombo("Big-Off-beat");
+        input.Combo = eventKeeper.FindCombo(movementCombo);
     }
 
     private void OnDrawGizmos()

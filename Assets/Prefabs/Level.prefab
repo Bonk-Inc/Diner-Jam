@@ -177,8 +177,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 2719078411988577886, guid: b975b6625f13bbe428f2d23d41a0babe, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9ecfe6fadb6d6424fa1deb5d2aac8996, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 0.8
+  m_Volume: 0.503
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -312,6 +312,7 @@ MonoBehaviour:
   map: {fileID: 7424707349159197422}
   spawnCell: {x: -7, y: 2}
   playerPrefab: {fileID: 4053482208692809331, guid: c50473cf867c4b4408000d4d5fd68a32, type: 3}
+  movementCombo: Big-Off-beat
 --- !u!1 &7424707349872386011
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 7424707349187697856}
-  bpm: 136
+  bpm: 80
   crotchet: 0
   songPosition: 0
   measurePosition: 0
@@ -379,31 +380,75 @@ MonoBehaviour:
   - name: Off-beat
     description: 
     active: 0
-    waitForMeasure: 0
     inputRequired: 0
+    currentPieceNumber: 0
     order:
     - bpmPosition: 
       measurePosition: 02000000040000000600000008000000
-      isBadInput: 0
-      keycodes: 
-    toDeactivate:
-      bpmPosition: 
-      measurePosition: 01000000030000000500000007000000
       isBadInput: 0
       keycodes: 
   - name: On-beat
     description: 
     active: 0
-    waitForMeasure: 0
     inputRequired: 0
+    currentPieceNumber: 0
     order:
     - bpmPosition: 
       measurePosition: 01000000030000000500000007000000
       isBadInput: 0
       keycodes: 
-    toDeactivate:
-      bpmPosition: 
-      measurePosition: 02000000040000000600000008000000
+  - name: Back-Forth-Motion
+    description: When the user makes a back and forth motion
+    active: 0
+    inputRequired: 0
+    currentPieceNumber: 0
+    order:
+    - bpmPosition: 
+      measurePosition: 01000000
+      isBadInput: 0
+      keycodes: 20000000
+    - bpmPosition: 
+      measurePosition: 02000000
+      isBadInput: 0
+      keycodes: 20000000
+    - bpmPosition: 
+      measurePosition: 03000000
+      isBadInput: 0
+      keycodes: 20000000
+    - bpmPosition: 
+      measurePosition: 04000000
+      isBadInput: 1
+      keycodes: 20000000
+    - bpmPosition: 
+      measurePosition: 05000000
+      isBadInput: 0
+      keycodes: 20000000
+    - bpmPosition: 
+      measurePosition: 06000000
+      isBadInput: 0
+      keycodes: 20000000
+    - bpmPosition: 
+      measurePosition: 07000000
+      isBadInput: 0
+      keycodes: 20000000
+  - name: Big-On-beat
+    description: When the user makes a back and forth motion
+    active: 0
+    inputRequired: 0
+    currentPieceNumber: 0
+    order:
+    - bpmPosition: 
+      measurePosition: 01000000020000000500000006000000
+      isBadInput: 0
+      keycodes: 
+  - name: Big-Off-beat
+    description: When the user makes a back and forth motion
+    active: 0
+    inputRequired: 0
+    currentPieceNumber: 0
+    order:
+    - bpmPosition: 
+      measurePosition: 03000000040000000700000008000000
       isBadInput: 0
       keycodes: 
 --- !u!1 &7424707350913203182

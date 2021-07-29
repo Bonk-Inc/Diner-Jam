@@ -358,6 +358,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7424707349343492253, guid: 19b9fe00251e311419da29ead325186a, type: 3}
+      propertyPath: movementCombo
+      value: Big-Off-beat
+      objectReference: {fileID: 0}
     - target: {fileID: 7424707349343492254, guid: 19b9fe00251e311419da29ead325186a, type: 3}
       propertyPath: m_Name
       value: Level
