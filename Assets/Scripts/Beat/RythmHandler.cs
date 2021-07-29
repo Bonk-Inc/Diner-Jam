@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RythmHandler : MonoBehaviour {
-    [SerializeField]
-    private bool[] _defaultRythm = new bool[8];
+
     [SerializeField]
     private AudioVisualizer _audioVisualizer;
-    private bool[] _currentRythm;
+    [SerializeField]
+    private ConductorEventKeeper _eventKeeper;
+    [SerializeField]
+    private string _defaultBeat;
+    private RhythmCombo _currentRythm;
     private Conductor _conductor;
 
     private void Start() {
         _conductor = Conductor.RhythmConductor;
         _conductor.OnMeasureChange += StartRythm;
-        _currentRythm = _defaultRythm;
+        _currentRythm = _eventKeeper.FindCombo(_defaultBeat);
     }
 
     private void OnDisable() {
@@ -24,7 +27,7 @@ public class RythmHandler : MonoBehaviour {
         _audioVisualizer.ShowBeat(_currentRythm, _conductor.MeasurePosition -1);
     }
 
-    public void ChangeRythm(bool[] BeatsToShow) {
+    public void ChangeRythm(RhythmCombo BeatsToShow) {
         if (BeatsToShow != null) {
             _currentRythm = BeatsToShow;
         }

@@ -12,9 +12,9 @@ public class AudioVisualizer : MonoBehaviour {
     [SerializeField]
     private Transform[] _soundBars = new Transform[8];
     [SerializeField]
-    private  float _scaleOffset;
+    private float _scaleOffset;
 
-    private bool[] _showBeat;
+    private bool[] _showBeat = new bool[8];
     private int _currentBeat;
     private SpriteRenderer[] _barSprites;
 
@@ -27,8 +27,13 @@ public class AudioVisualizer : MonoBehaviour {
         }
     }
 
-    public void ShowBeat(bool[] show, int currentBeat) {
-        _showBeat = show;
+    public void ShowBeat(RhythmCombo show, int currentBeat) {
+        for (int i = 0; i < _showBeat.Length; i++) {
+            _showBeat[i] = false;
+        }
+        for (int i = 0; i < show.order[show.currentPieceNumber].measurePosition.Length; i++) {
+            _showBeat[show.order[show.currentPieceNumber].measurePosition[i] -1] = true;
+        }
         _currentBeat = currentBeat;
     }
 
