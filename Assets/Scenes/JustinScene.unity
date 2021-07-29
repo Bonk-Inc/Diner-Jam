@@ -299,17 +299,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1059658987 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1964638948444906579, guid: 1a3930e53f85aa4bab8671eea16ec30b, type: 3}
-  m_PrefabInstance: {fileID: 4808266113520113061}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b559042ff8134066a5748723d58c7cac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1569985228
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +380,7 @@ Transform:
   m_LocalScale: {x: 7.3823, y: 7.3823, z: 7.3823}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1569985231
 MonoBehaviour:
@@ -402,26 +391,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1569985228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eb94b63f8c844f581d335a8b8a12c49, type: 3}
+  m_Script: {fileID: 11500000, guid: aea8427b30f44a07918d179742bbc575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Appel Juice
-  requiredItems:
-  - {fileID: 2051069631}
-  - {fileID: 1059658987}
-  preApple: {fileID: 2051069631}
-  preSugar: {fileID: 1059658987}
---- !u!114 &2051069631 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4955802762961512374, guid: 7fb6af2ecf83f7ef39223eed0d55ad8a, type: 3}
-  m_PrefabInstance: {fileID: 4955802764140130569}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7443bcb163f469c8d1dfac0643b5d77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  dishValues: {fileID: 11400000, guid: ec6060d026ccc9cd6b2edce61a8a0bfc, type: 2}
 --- !u!1001 &4808266113520113061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -504,7 +477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4955802762961512393, guid: 7fb6af2ecf83f7ef39223eed0d55ad8a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4955802762961512393, guid: 7fb6af2ecf83f7ef39223eed0d55ad8a, type: 3}
       propertyPath: m_LocalPosition.x
