@@ -9,11 +9,11 @@ public abstract class Dish : MonoBehaviour
     protected string name;
 
     [SerializeField]
-    protected List<Ingredient> requiredItems = new List<Ingredient>();
+    protected List<string> requiredItems = new List<string>();
 
     public bool AddGatheredItem(Ingredient collectedIngredient)
     {
-        Ingredient ingredientInList = requiredItems.Find(i => i.GetType() == collectedIngredient.GetType());
+        string ingredientInList = requiredItems.Find(i => i == collectedIngredient.Name);
         
         if (null == ingredientInList)
             return false;
