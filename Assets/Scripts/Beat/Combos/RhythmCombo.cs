@@ -7,16 +7,15 @@ using System;
 public class RhythmCombo
 {
     public string name;
+    [TextArea(3, 10)]
     public string description;
 
     public event Action ComboFinished;
-    public bool active, waitForMeasure, inputRequired;
+    public bool active, inputRequired;
+    public int currentPieceNumber = 0;
 
     public List<RhythmComboPiece> order;
 
-    public RhythmComboPiece toDeactivate;
-
-    private int currentPieceNumber = 0;
     private RhythmComboPiece currentPiece;
 
     public void ComboUsed()
@@ -26,17 +25,15 @@ public class RhythmCombo
 
     public void CheckCombo()
     {
-        if (active)
-        {
-            currentPiece = toDeactivate;
-        }
-        else
-        {
-            //if (waitForMeasure)
-            //    return;
-            currentPiece = order[currentPieceNumber];
+        if(inputRequired){
+            if(currentPiece.isBadInput)
+                ContinueCombo();
+            else
+                ResetCombo();
         }
 
+        active = false;
+        currentPiece = order[currentPieceNumber];
 
         if(currentPiece.bpmPosition.Length == 0 && currentPiece.measurePosition.Length == 0)
         {
@@ -97,21 +94,32 @@ public class RhythmCombo
 
     public void InputCheck()
     {
-        // TODO: Actual Input checks
-        inputRequired = false;
-        ContinueCombo();
+        foreach (KeyCode key in currentPiece.keycodes)
+        {
+            if (Input.GetKeyDown(key))
+            {
+                if(currentPiece.isBadInput){
+                    Debug.Log("bad input!");
+                    ResetCombo();
+                }
+                else{
+                    ContinueCombo();
+                }
+                return;
+            }   
+        }
     }
 
     private void ContinueCombo()
     {
+        inputRequired = false;
         if (currentPieceNumber + 1 >= order.Count)
         {
             Debug.Log(name + " has been complete!");
             if (ComboFinished != null)
                 ComboFinished.Invoke();
 
-            active = !active;
-            waitForMeasure = !waitForMeasure;
+            active = true;
             ResetCombo();
         }
         else
@@ -122,7 +130,9 @@ public class RhythmCombo
 
     public void ResetCombo()
     {
+        inputRequired = false;
         currentPieceNumber = 0;
+        currentPiece = null;
     }
     
 }
