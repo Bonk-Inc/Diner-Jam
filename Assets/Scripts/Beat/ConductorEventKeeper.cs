@@ -21,7 +21,6 @@ public class ConductorEventKeeper : MonoBehaviour
         }
     }
 
-    // Change string name into an enum?
     public RhythmCombo FindCombo(string name)
     {
         foreach (RhythmCombo combo in comboOrder)

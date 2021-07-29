@@ -37,7 +37,7 @@ public class PlayerGridSpawn : MonoBehaviour
         carryObject.Interaction = map.transform;
 
         PlayerMovementInput input = player.GetComponent<PlayerMovementInput>();
-        input.Combo = eventKeeper.FindCombo("Off-beat");
+        input.Combo = eventKeeper.FindCombo("Big-Off-beat");
     }
 
     private void OnDrawGizmos()
