@@ -99,7 +99,6 @@ public class RhythmCombo
             if (Input.GetKeyDown(key))
             {
                 if(currentPiece.isBadInput){
-                    Debug.Log("bad input!");
                     ResetCombo();
                 }
                 else{
@@ -115,7 +114,6 @@ public class RhythmCombo
         inputRequired = false;
         if (currentPieceNumber + 1 >= order.Count)
         {
-            Debug.Log(name + " has been complete!");
             if (ComboFinished != null)
                 ComboFinished.Invoke();
 

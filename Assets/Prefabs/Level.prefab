@@ -312,7 +312,7 @@ MonoBehaviour:
   map: {fileID: 7424707349159197422}
   spawnCell: {x: -7, y: 2}
   playerPrefab: {fileID: 4053482208692809331, guid: c50473cf867c4b4408000d4d5fd68a32, type: 3}
-  movementCombo: Big-Off-beat
+  movementCombo: On-beat
 --- !u!1 &7424707349872386011
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 7424707349187697856}
-  bpm: 80
+  bpm: 136
   crotchet: 0
   songPosition: 0
   measurePosition: 0
@@ -449,6 +449,16 @@ MonoBehaviour:
     order:
     - bpmPosition: 
       measurePosition: 03000000040000000700000008000000
+      isBadInput: 0
+      keycodes: 
+  - name: Every-beat
+    description: When the user makes a back and forth motion
+    active: 0
+    inputRequired: 0
+    currentPieceNumber: 0
+    order:
+    - bpmPosition: 
+      measurePosition: 0100000002000000030000000400000005000000060000000700000008000000
       isBadInput: 0
       keycodes: 
 --- !u!1 &7424707350913203182
