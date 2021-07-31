@@ -1,52 +1,58 @@
 fileFormatVersion: 2
-guid: 3234916ff48dd474ca35905a1a5aa68a
+guid: 90afb6811ab7fdb49bcb4b398e5d0abc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1045181238759104467
+      213: 2370599512715246742
     second: Spaghetti
   - first:
-      213: 3046544090647025007
+      213: -6370523672131179112
     second: Bread
   - first:
-      213: -314262122811554439
+      213: 6877162726333623504
     second: MaisBread
   - first:
-      213: -6704000743581025313
+      213: -612859057647903949
     second: PumpkinBread
   - first:
-      213: 3783751772801332867
+      213: -528145739174729780
     second: PizzaMargeritta
   - first:
-      213: 3766231896858906920
+      213: -7926183837516347292
     second: PizzaSalami
   - first:
-      213: 2806712619628358444
+      213: 2899977019656850458
     second: Pasta
   - first:
-      213: 6284960523649584348
+      213: -5424263201532281738
     second: SlicedTomato
   - first:
-      213: 9134550221621171518
+      213: -5817872944049413961
     second: Tomato
   - first:
-      213: 6171289439109564095
+      213: 2915892257388589760
     second: TomatoSauce
   - first:
-      213: 8770456580488607946
+      213: 9069555764153941057
     second: Dough
   - first:
-      213: 5143833525945423608
+      213: 796169317485058897
     second: PizzaDough
   - first:
-      213: -3793841646489435339
-    second: Corn
+      213: 1735986085031247334
+    second: Mais
   - first:
-      213: -4897304319320830578
+      213: 7171162457602727330
     second: SlicedSalami
   - first:
-      213: 8188682129462126002
-    second: Salami
+      213: 2395310533819049598
+    second: Salam
+  - first:
+      213: 5427720770446501268
+    second: Cheese
+  - first:
+      213: -8070349813319376402
+    second: Pumpkin
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -91,7 +97,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -151,19 +157,19 @@ TextureImporter:
       name: Spaghetti
       rect:
         serializedVersion: 2
-        x: 10
-        y: 380
-        width: 210
-        height: 120
+        x: 0
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d206cd17335ce71f0800000000000000
-      internalID: -1045181238759104467
+      spriteID: 69c3b1462bf06e020800000000000000
+      internalID: 2370599512715246742
       vertices: []
       indices: 
       edges: []
@@ -172,19 +178,19 @@ TextureImporter:
       name: Bread
       rect:
         serializedVersion: 2
-        x: 250
-        y: 380
-        width: 240
-        height: 150
+        x: 48
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f65d49b85bf774a20800000000000000
-      internalID: 3046544090647025007
+      spriteID: 89d6761097a5797a0800000000000000
+      internalID: -6370523672131179112
       vertices: []
       indices: 
       edges: []
@@ -193,19 +199,19 @@ TextureImporter:
       name: MaisBread
       rect:
         serializedVersion: 2
-        x: 530
-        y: 380
-        width: 200
-        height: 130
+        x: 96
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 975057ba34483abf0800000000000000
-      internalID: -314262122811554439
+      spriteID: 0dc2ca51017907f50800000000000000
+      internalID: 6877162726333623504
       vertices: []
       indices: 
       edges: []
@@ -214,19 +220,19 @@ TextureImporter:
       name: PumpkinBread
       rect:
         serializedVersion: 2
-        x: 750
-        y: 380
-        width: 270
-        height: 130
+        x: 144
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdbf5e0d7da96f2a0800000000000000
-      internalID: -6704000743581025313
+      spriteID: 33b14832fefae77f0800000000000000
+      internalID: -612859057647903949
       vertices: []
       indices: 
       edges: []
@@ -235,19 +241,19 @@ TextureImporter:
       name: PizzaMargeritta
       rect:
         serializedVersion: 2
-        x: 1050
-        y: 340
-        width: 190
-        height: 180
+        x: 192
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 386f310b036928430800000000000000
-      internalID: 3783751772801332867
+      spriteID: cc7aada9f36aba8f0800000000000000
+      internalID: -528145739174729780
       vertices: []
       indices: 
       edges: []
@@ -256,19 +262,19 @@ TextureImporter:
       name: PizzaSalami
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 340
-        width: 190
-        height: 180
+        x: 0
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8215502b4f7544430800000000000000
-      internalID: 3766231896858906920
+      spriteID: 46845646bc9800290800000000000000
+      internalID: -7926183837516347292
       vertices: []
       indices: 
       edges: []
@@ -277,19 +283,19 @@ TextureImporter:
       name: Pasta
       rect:
         serializedVersion: 2
-        x: 30
-        y: 180
-        width: 140
-        height: 140
+        x: 48
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2bed87c14273f620800000000000000
-      internalID: 2806712619628358444
+      spriteID: a1c41711cb9ce3820800000000000000
+      internalID: 2899977019656850458
       vertices: []
       indices: 
       edges: []
@@ -298,19 +304,19 @@ TextureImporter:
       name: SlicedTomato
       rect:
         serializedVersion: 2
-        x: 210
-        y: 170
-        width: 160
-        height: 130
+        x: 96
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdc8c7f0c4aa83750800000000000000
-      internalID: 6284960523649584348
+      spriteID: 67cf1707b5529b4b0800000000000000
+      internalID: -5424263201532281738
       vertices: []
       indices: 
       edges: []
@@ -319,19 +325,19 @@ TextureImporter:
       name: Tomato
       rect:
         serializedVersion: 2
-        x: 410
-        y: 170
-        width: 130
-        height: 150
+        x: 144
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3512b6970174ce70800000000000000
-      internalID: 9134550221621171518
+      spriteID: 7b0249db163c24fa0800000000000000
+      internalID: -5817872944049413961
       vertices: []
       indices: 
       edges: []
@@ -340,19 +346,19 @@ TextureImporter:
       name: TomatoSauce
       rect:
         serializedVersion: 2
-        x: 600
-        y: 170
-        width: 150
-        height: 110
+        x: 192
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb6ce384c03d4a550800000000000000
-      internalID: 6171289439109564095
+      spriteID: 0c275fc1f84577820800000000000000
+      internalID: 2915892257388589760
       vertices: []
       indices: 
       edges: []
@@ -361,19 +367,19 @@ TextureImporter:
       name: Dough
       rect:
         serializedVersion: 2
-        x: 810
-        y: 170
-        width: 170
-        height: 120
+        x: 0
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac8b206cacbe6b970800000000000000
-      internalID: 8770456580488607946
+      spriteID: 14cfdf83ae88ddd70800000000000000
+      internalID: 9069555764153941057
       vertices: []
       indices: 
       edges: []
@@ -382,40 +388,40 @@ TextureImporter:
       name: PizzaDough
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 170
-        width: 170
-        height: 120
+        x: 48
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f6d8b1b651926740800000000000000
-      internalID: 5143833525945423608
+      spriteID: 15b13c5a6cf8c0b00800000000000000
+      internalID: 796169317485058897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corn
+      name: Mais
       rect:
         serializedVersion: 2
-        x: 1230
-        y: 160
-        width: 170
-        height: 160
+        x: 96
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5330ae68f11995bc0800000000000000
-      internalID: -3793841646489435339
+      spriteID: 6edfe4d8526771810800000000000000
+      internalID: 1735986085031247334
       vertices: []
       indices: 
       edges: []
@@ -424,40 +430,82 @@ TextureImporter:
       name: SlicedSalami
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 180
-        height: 130
+        x: 144
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8d45e92ba7490cb0800000000000000
-      internalID: -4897304319320830578
+      spriteID: 2ad1700c246158360800000000000000
+      internalID: 7171162457602727330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Salami
+      name: Salam
       rect:
         serializedVersion: 2
-        x: 220
-        y: 0
-        width: 256
-        height: 80
+        x: 192
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b5ed21e20b04a170800000000000000
-      internalID: 8188682129462126002
+      spriteID: e7629075d3add3120800000000000000
+      internalID: 2395310533819049598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cheese
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495297e8843235b40800000000000000
+      internalID: 5427720770446501268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pumpkin
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee165f37a9b500090800000000000000
+      internalID: -8070349813319376402
       vertices: []
       indices: 
       edges: []
@@ -465,7 +513,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3f67c5bd2d1323541a38b463383aa6f5
+    spriteID: 33e0322a66e602741a0cdb4358c11a5f
     internalID: 0
     vertices: []
     indices: 

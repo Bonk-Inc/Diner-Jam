@@ -4,26 +4,29 @@ using UnityEngine;
 
 public class PickupBox : MonoBehaviour
 {
-
-    [SerializeField]
-    private ConductorEventKeeper comboKeeper;
     [SerializeField]
     private string comboName;
 
     [SerializeField]
-    private Ingredient ingredient;
+    private Ingredient boxIngredient;
+    private ConductorEventKeeper comboKeeper;
 
     private RhythmCombo pickUpCombo;
 
+    public Ingredient BoxIngredient => boxIngredient;
+
     private void Start(){
+        comboKeeper = Conductor.RhythmConductor.GetComponent<ConductorEventKeeper>();
         pickUpCombo = comboKeeper.FindCombo(comboName);
     }
 
-    private void Update(){
+    private void Update(){  
         if(pickUpCombo.active && Input.GetKeyDown("space")){
 
         }
     }
+
+    
 
 
 }

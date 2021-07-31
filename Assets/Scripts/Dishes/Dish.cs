@@ -7,6 +7,8 @@ public class Dish : MonoBehaviour
 {
     [SerializeField]
     private DishInfo dishValues;
+
+    public event Action<Dish> OnDishCreated;
     
     public bool AddGatheredItem(Ingredient collectedIngredient)
     {
@@ -25,6 +27,9 @@ public class Dish : MonoBehaviour
 
     private void CreateDish()
     {
+        if(OnDishCreated != null)
+            OnDishCreated.Invoke(this);
+
         print(dishValues.DishName);   
     }
 }

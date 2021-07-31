@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96f782439087eaf409e67ea326fcfa01, type: 3}
-  m_Name: Saucystuff
+  m_Name: SlicedSalami
   m_EditorClassIdentifier: 
-  dishName: Sauce
-  icon: {fileID: 21300000, guid: 1d2d24e2648cc144293533cd366c1e58, type: 3}
+  dishName: Sliced Salami
+  icon: {fileID: 7171162457602727330, guid: 90afb6811ab7fdb49bcb4b398e5d0abc, type: 3}

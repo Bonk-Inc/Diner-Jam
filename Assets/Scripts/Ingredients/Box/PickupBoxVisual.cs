@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PickupBoxVisual : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private SpriteRenderer renderer;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private PickupBox pickupBox;
+    private void Start() {
+        pickupBox = GetComponent<PickupBox>();
+        renderer.sprite = pickupBox.BoxIngredient.Data.Icon;
     }
 }
