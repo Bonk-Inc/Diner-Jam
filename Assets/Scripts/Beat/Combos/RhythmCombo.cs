@@ -10,7 +10,7 @@ public class RhythmCombo
     [TextArea(3, 10)]
     public string description;
 
-    public event Action ComboFinished;
+    public Action ComboFinished;
     public bool active, inputRequired;
     public int currentPieceNumber = 0;
 
