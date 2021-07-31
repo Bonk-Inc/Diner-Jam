@@ -20,13 +20,14 @@ public class PickupBox : MonoBehaviour
         pickUpCombo = comboKeeper.FindCombo(comboName);
     }
 
+    //TODO Spawn ingredient in and put it in players hand.
     private void Update(){  
         if(pickUpCombo.active && Input.GetKeyDown("space")){
 
         }
     }
 
-    
+
 
 
 }

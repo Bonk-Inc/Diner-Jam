@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92bd062571f0d81d5a05862c5a089e49, type: 3}
-  m_Name: MaisBread
+  m_Name: PumpkinBread
   m_EditorClassIdentifier: 
-  dishName: Mais Bread
+  dishName: Pumpkin Bread
   requiredItems:
   - {fileID: 11400000, guid: 29ca3d496126ef64ba703fcef54f68b8, type: 2}
-  - {fileID: 11400000, guid: aadeb36524cb14e4a9839e83a622cafc, type: 2}
-  icon: {fileID: 6877162726333623504, guid: 90afb6811ab7fdb49bcb4b398e5d0abc, type: 3}
+  - {fileID: 11400000, guid: a6413ffd7e9b0fe4f9a4c17c48bd1996, type: 2}
+  icon: {fileID: -612859057647903949, guid: 90afb6811ab7fdb49bcb4b398e5d0abc, type: 3}
