@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96f782439087eaf409e67ea326fcfa01, type: 3}
-  m_Name: Dough
+  m_Name: CookedDough
   m_EditorClassIdentifier: 
-  dishName: Dough
-  icon: {fileID: 9069555764153941057, guid: 90afb6811ab7fdb49bcb4b398e5d0abc, type: 3}
+  dishName: Cooked Dough
+  icon: {fileID: 796169317485058897, guid: 90afb6811ab7fdb49bcb4b398e5d0abc, type: 3}
   cuttable: {fileID: 0}
-  cookable: {fileID: 11400000, guid: 3f63e626654cc6548acd4be8b6addeb6, type: 2}
+  cookable: {fileID: 0}

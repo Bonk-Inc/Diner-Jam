@@ -28,7 +28,7 @@ public class PlayerInteractor : MonoBehaviour
 
         gobj.transform.SetParent(transform);
         gobj.transform.localPosition = Vector3.up * 0.65f;
-        gobj.transform.localScale = Vector3.one * 0.2f;
+        gobj.transform.localScale = Vector3.one * 0.6f;
         inventory = gobj;
         return true;
     }
