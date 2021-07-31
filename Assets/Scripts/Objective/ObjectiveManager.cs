@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectiveManeger : MonoBehaviour
+public class ObjectiveManager : MonoBehaviour
 {
     [SerializeField]
-    private List<DishInfo> currentObjectives;
+    private List<ItemInfo> currentObjectives;
 
     [SerializeField]
     private DishUIManager UIHandler;
@@ -29,7 +29,7 @@ public class ObjectiveManeger : MonoBehaviour
         FillObjeciveToMinimum();
     }
 
-    private void RemoveObjective(DishInfo info)
+    private void RemoveObjective(ItemInfo info)
     {
         currentObjectives.Remove(info);
         UIHandler.RemoveDish(info);
@@ -51,12 +51,12 @@ public class ObjectiveManeger : MonoBehaviour
         {
             return;
         }
-        DishInfo newObjective = CreateNewObjective();
+        ItemInfo newObjective = CreateNewObjective();
         currentObjectives.Add(newObjective);
         UIHandler.AddDishUI(newObjective);
     }
 
-    private DishInfo CreateNewObjective()
+    private ItemInfo CreateNewObjective()
     {
         return creator.CreateObjective();
     }

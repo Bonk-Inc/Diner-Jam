@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class ObjectiveCreator : MonoBehaviour
 {
-    public abstract DishInfo CreateObjective();
+    public abstract ItemInfo CreateObjective();
 }

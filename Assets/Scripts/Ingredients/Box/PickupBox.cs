@@ -8,12 +8,12 @@ public class PickupBox : InteractableTile
     private string comboName;
 
     [SerializeField]
-    private Ingredient boxIngredient;
+    private Item boxIngredient;
     private ConductorEventKeeper comboKeeper;
 
     private RhythmCombo pickUpCombo;
 
-    public Ingredient BoxIngredient => boxIngredient;
+    public Item BoxIngredient => boxIngredient;
 
     public override void Interact(PlayerInteractor player)
     {
@@ -21,7 +21,7 @@ public class PickupBox : InteractableTile
             if(player.HasItem())
                 return;
                 
-            Ingredient ingredient = Instantiate(boxIngredient);
+            Item ingredient = Instantiate(boxIngredient);
             player.PutInInventory(ingredient.gameObject);
         }
     }

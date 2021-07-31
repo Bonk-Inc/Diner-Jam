@@ -10,7 +10,7 @@ public class DishUIManager : MonoBehaviour
 
     private List<DishUI> currentObjectiveUIElements = new List<DishUI>();
 
-    public void AddDishUI(DishInfo dish)
+    public void AddDishUI(ItemInfo dish)
     {
         DishUI dishUI = Instantiate(dishUIprefab);
         dishUI.transform.SetParent(this.transform);
@@ -19,7 +19,7 @@ public class DishUIManager : MonoBehaviour
         currentObjectiveUIElements.Add(dishUI);
     }
 
-    public void RemoveDish(DishInfo dishToRemove)
+    public void RemoveDish(ItemInfo dishToRemove)
     {
         int dishIndex = currentObjectiveUIElements.FindIndex((dish) => dish.DishData.DishName == dishToRemove.DishName);
         if(dishIndex < 0)

@@ -9,7 +9,8 @@ public class DishInformationIngredientsUI : MonoBehaviour
     [SerializeField]
     private Image ingredientPrefab; 
 
-    public void SetIngredients(List<IngredientData> ingredientsData)
+    //TODO Rework needed - No more Ingredients (Temp change to ItemInfo)
+    public void SetIngredients(List<ItemInfo> ingredientsData)
     {
         RemoveIngredients();
         AddIngredients(ingredientsData);
@@ -24,15 +25,15 @@ public class DishInformationIngredientsUI : MonoBehaviour
         }
     }
 
-    private void AddIngredients(List<IngredientData> IngredientsData)
+    private void AddIngredients(List<ItemInfo> IngredientsData)
     {
-        foreach (IngredientData ingredient in IngredientsData)
+        foreach (ItemInfo ingredient in IngredientsData)
         {
             AddIngredient(ingredient);
         }
     }
 
-    private void AddIngredient(IngredientData data)
+    private void AddIngredient(ItemInfo data)
     {
         Image ingredientUI = CreateNewIngredientUI();
         ingredientUI.sprite = data.Icon;

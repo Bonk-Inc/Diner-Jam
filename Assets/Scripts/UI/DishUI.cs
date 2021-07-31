@@ -14,16 +14,17 @@ public class DishUI : MonoBehaviour
     [SerializeField]
     private DishInformationIngredientsUI ingredientsUI;
 
-    private DishInfo data;
+    private ItemInfo data;
 
-    public DishInfo DishData => data;
+    public ItemInfo DishData => data;
 
-    public void SetDishInfo(DishInfo data)
+    public void SetDishInfo(ItemInfo data)
     {
         this.data = data;
         dishName.SetText(data.DishName);
         dishIcon.sprite = data.Icon;
-        ingredientsUI.SetIngredients(data.RequiredItems);
+        // TODO FIX, data doesnt have requiredItems anymore.
+        // ingredientsUI.SetIngredients(data.RequiredItems);
     }
 
 

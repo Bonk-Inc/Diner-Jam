@@ -18,17 +18,11 @@ public class CuttingBoardTile : PickupTile
     public override void Interact(PlayerInteractor player)
     {
         base.Interact(player);
-        canPickUp = false;
+        
         cuttingCombo.ComboFinished = Cut;
     }
 
     private void Cut(){
-        canPickUp = true;
-        Ingredient ingredient = item.GetComponent<Ingredient>();
-        if(ingredient == null)
-            return;
         
-        
-        //ingredient.Data.Cuttable;
     }
 }

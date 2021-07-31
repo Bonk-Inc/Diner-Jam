@@ -6,8 +6,6 @@ public class PickupTile : InteractableTile
 {
     public GameObject item;
 
-    protected bool canPickUp = true;
-
     public override void Interact(PlayerInteractor player)
     {
         if(item == null){
@@ -18,7 +16,7 @@ public class PickupTile : InteractableTile
                 item.transform.localPosition = Vector3.zero;
             }
         } else {
-            if(!player.HasItem() && canPickUp){
+            if(!player.HasItem()){
                 player.PutInInventory(item);
                 item = null;
             }

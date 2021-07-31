@@ -10,6 +10,7 @@ public class PickupBoxVisual : MonoBehaviour
     private PickupBox pickupBox;
     private void Start() {
         pickupBox = GetComponent<PickupBox>();
-        renderer.sprite = pickupBox.BoxIngredient.Data.Icon;
+        // TODO Rework
+        // renderer.sprite = pickupBox.BoxIngredient.Data.Icon;
     }
 }
