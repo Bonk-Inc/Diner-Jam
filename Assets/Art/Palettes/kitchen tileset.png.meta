@@ -113,6 +113,9 @@ TextureImporter:
   - first:
       213: -3836319412074386430
     second: kitchen tileset_36
+  - first:
+      213: -4918072802747209531
+    second: kitchen tileset_37
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -986,6 +989,27 @@ TextureImporter:
       bones: []
       spriteID: 20cee5602d7a2cac0800000000000000
       internalID: -3836319412074386430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kitchen tileset_37
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c82ebcc7de7fbbb0800000000000000
+      internalID: -4918072802747209531
       vertices: []
       indices: 
       edges: []
