@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96f782439087eaf409e67ea326fcfa01, type: 3}
   m_Name: Saucystuff
   m_EditorClassIdentifier: 
-  dishName: 
-  icon: {fileID: 0}
+  dishName: Sauce
+  icon: {fileID: 21300000, guid: 1d2d24e2648cc144293533cd366c1e58, type: 3}

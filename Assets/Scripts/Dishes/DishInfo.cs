@@ -14,7 +14,7 @@ public class DishInfo : ScriptableObject
     [SerializeField]
     private Sprite icon;
 
-    public string Name => dishName;
+    public string DishName => dishName;
     
     public List<IngredientData> RequiredItems => requiredItems;
 

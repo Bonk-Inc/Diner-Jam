@@ -6,14 +6,26 @@ using UnityEngine.UI;
 public class DishUI : MonoBehaviour
 {
     [SerializeField]
-    private DishInfo dish;
-
-    [SerializeField]
     private Image dishIcon;
 
-    public void SetDish(DishInfo dish)
+    [SerializeField]
+    private TMPro.TextMeshProUGUI dishName;
+
+    [SerializeField]
+    private DishInformationIngredientsUI ingredientsUI;
+
+    private DishInfo data;
+
+    public DishInfo DishData => data;
+
+    public void SetDishInfo(DishInfo data)
     {
-        this.dish = dish;
+        this.data = data;
+        dishName.SetText(data.DishName);
+        dishIcon.sprite = data.Icon;
+        ingredientsUI.SetIngredients(data.RequiredItems);
     }
+
+
 
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96f782439087eaf409e67ea326fcfa01, type: 3}
   m_Name: Spaget
   m_EditorClassIdentifier: 
-  dishName: 
-  icon: {fileID: 0}
+  dishName: Spagettos
+  icon: {fileID: 21300000, guid: c68cdadd70e6a00478523a3024ec795d, type: 3}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96f782439087eaf409e67ea326fcfa01, type: 3}
   m_Name: Meatballs
   m_EditorClassIdentifier: 
-  dishName: 
-  icon: {fileID: 0}
+  dishName: Meatballs
+  icon: {fileID: 21300000, guid: ab4a302fe4eadd243a71223a8f1e5ee3, type: 3}
