@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 95006884406513924}
   - component: {fileID: 3970181962369967842}
   - component: {fileID: 352736176052292302}
+  - component: {fileID: 1552572633}
+  - component: {fileID: 5968211506515996216}
   m_Layer: 0
   m_Name: ItemBox
   m_TagString: Untagged
@@ -178,3 +180,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed25658b11fcef841a1b8019142895a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1552572633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393904931246392759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c299ae0ebfda3e4ebe5171c1b8e5e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboName: On-beat
+  boxIngredient: {fileID: 5908792896333630193, guid: 62fadef0cb5f116478b10c65ec541a5a, type: 3}
+--- !u!114 &5968211506515996216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393904931246392759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee1ab97b98ebc44188ab35536d6ccc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 3236548056423590807}
