@@ -11,6 +11,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2Int LookingAt { get; private set; }
 
+    [SerializeField]
+    private Sprite frontSprite, sideSprite;
+
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -27,7 +33,21 @@ public class PlayerMovement : MonoBehaviour
         LookingAt = GetDesiredChange(direction);
         Vector2Int desiredPosition = gridPosition.Position + LookingAt;
         
-        transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, LookingAt));
+        if(direction == MoveDirection.UP || direction == MoveDirection.DOWN)
+        {
+            spriteRenderer.sprite = frontSprite;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if(direction == MoveDirection.LEFT)
+        {
+            spriteRenderer.sprite = sideSprite;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }else if(direction == MoveDirection.RIGHT)
+        {
+            spriteRenderer.sprite = sideSprite;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        
 
         if (map.GetCell(desiredPosition) == null)
         {
