@@ -175,18 +175,18 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -200,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221481305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0.51, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -297,6 +297,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1283335124962692620, guid: 17c0f54f74c9ea14a9a8107d90dc9e02, type: 3}
+      propertyPath: possibleObjectives.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283335124962692620, guid: 17c0f54f74c9ea14a9a8107d90dc9e02, type: 3}
+      propertyPath: possibleObjectives.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 76ff02118ca1b4041a88c656ab3ae3c8, type: 2}
+    - target: {fileID: 1283335124962692620, guid: 17c0f54f74c9ea14a9a8107d90dc9e02, type: 3}
+      propertyPath: possibleObjectives.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 66906308d2d81d846980654efc084f75, type: 2}
     - target: {fileID: 1283335124962692663, guid: 17c0f54f74c9ea14a9a8107d90dc9e02, type: 3}
       propertyPath: m_Name
       value: Current Dish information UI
@@ -403,6 +415,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3260981019369967225, guid: 19b9fe00251e311419da29ead325186a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7424707349343492252, guid: 19b9fe00251e311419da29ead325186a, type: 3}
       propertyPath: m_RootOrder
       value: 2
