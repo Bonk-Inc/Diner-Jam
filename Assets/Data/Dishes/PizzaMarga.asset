@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92bd062571f0d81d5a05862c5a089e49, type: 3}
-  m_Name: Bread
+  m_Name: PizzaMarga
   m_EditorClassIdentifier: 
-  dishName: Bread
-  requiredItems:
-  - {fileID: 11400000, guid: 29ca3d496126ef64ba703fcef54f68b8, type: 2}
-  icon: {fileID: -6370523672131179112, guid: 90afb6811ab7fdb49bcb4b398e5d0abc, type: 3}
+  dishName: pizza margherita
+  requiredItems: []
+  icon: {fileID: -528145739174729780, guid: 90afb6811ab7fdb49bcb4b398e5d0abc, type: 3}
