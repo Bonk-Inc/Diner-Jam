@@ -25,6 +25,6 @@ public class Dish : MonoBehaviour
 
     private void CreateDish()
     {
-        print(dishValues.Name);   
+        print(dishValues.DishName);   
     }
 }

@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: spaghetti bolognese
   m_EditorClassIdentifier: 
   dishName: Spagerros
-  requiredItems: []
+  requiredItems:
+  - {fileID: 11400000, guid: da9d5d8078b55af42b1346ec95171b7e, type: 2}
+  - {fileID: 11400000, guid: 4b78aa74ffc593a4bbcf3584b8cf5274, type: 2}
+  - {fileID: 11400000, guid: 187a41b4f17e3db4eb7f671e0e5839b8, type: 2}
   icon: {fileID: 21300000, guid: 15317a342e27d0c46bc3046e24581978, type: 3}
