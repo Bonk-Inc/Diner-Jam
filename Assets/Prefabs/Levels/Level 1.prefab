@@ -4874,7 +4874,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Counter 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2886715971141686992, guid: bdb42e9fe845d8f4a87c72bb478b4ee6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bdb42e9fe845d8f4a87c72bb478b4ee6, type: 3}
 --- !u!4 &3757254146535082868 stripped
 Transform:
@@ -9356,7 +9357,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Counter 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2886715971141686992, guid: bdb42e9fe845d8f4a87c72bb478b4ee6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bdb42e9fe845d8f4a87c72bb478b4ee6, type: 3}
 --- !u!4 &8504419679143267912 stripped
 Transform:
