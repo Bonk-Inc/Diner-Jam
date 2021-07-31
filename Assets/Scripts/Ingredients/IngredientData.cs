@@ -11,6 +11,12 @@ public class IngredientData : ScriptableObject
     [SerializeField]
     private Sprite icon;
 
+    [SerializeField]
+    private IngredientData cuttable;
+
+    [SerializeField]
+    private IngredientData cookable;
+
     public string Name => dishName;
 
     public Sprite Icon => icon;

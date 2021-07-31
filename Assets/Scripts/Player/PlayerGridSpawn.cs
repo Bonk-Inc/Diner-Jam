@@ -35,9 +35,12 @@ public class PlayerGridSpawn : MonoBehaviour
         PlayerMovement movement = player.GetComponent<PlayerMovement>();
         movement.SetMap(map);
 
-        CarryObject carryObject = player.GetComponent<CarryObject>();
-        carryObject.GameobjectMap = map;
-        carryObject.Interaction = map.transform;
+        // CarryObject carryObject = player.GetComponent<CarryObject>();
+        // carryObject.GameobjectMap = map;
+        // carryObject.Interaction = map.transform;
+
+        PlayerInteractor interaction = player.GetComponent<PlayerInteractor>();
+        interaction.GameobjectMap = map;
 
         PlayerMovementInput input = player.GetComponent<PlayerMovementInput>();
         input.Combo = eventKeeper.FindCombo(movementCombo);
