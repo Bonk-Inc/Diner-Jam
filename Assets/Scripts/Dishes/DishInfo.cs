@@ -6,14 +6,17 @@ using UnityEngine;
 public class DishInfo : ScriptableObject
 {
     [SerializeField]
-    private string name;
+    private string dishName;
     
     [SerializeField]
-    private List<string> requiredItems = new List<string>();
-    
-    
+    private List<IngredientData> requiredItems = new List<IngredientData>();
 
-    public string Name => name;
+    [SerializeField]
+    private Sprite icon;
+
+    public string DishName => dishName;
     
-    public List<string> RequiredItems => requiredItems;
+    public List<IngredientData> RequiredItems => requiredItems;
+
+    public Sprite Icon => icon;
 }

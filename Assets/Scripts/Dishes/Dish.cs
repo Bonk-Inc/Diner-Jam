@@ -10,8 +10,8 @@ public class Dish : MonoBehaviour
     
     public bool AddGatheredItem(Ingredient collectedIngredient)
     {
-        List<string> requiredItems = dishValues.RequiredItems;
-        string ingredientInList = requiredItems.Find(i => i == collectedIngredient.Name);
+        List<IngredientData> requiredItems = dishValues.RequiredItems;
+        IngredientData ingredientInList = requiredItems.Find(i => i.Name == collectedIngredient.Name);
         
         if (null == ingredientInList)
             return false;
@@ -25,6 +25,6 @@ public class Dish : MonoBehaviour
 
     private void CreateDish()
     {
-        print(dishValues.Name);   
+        print(dishValues.DishName);   
     }
 }

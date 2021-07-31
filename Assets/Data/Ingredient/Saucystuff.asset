@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92bd062571f0d81d5a05862c5a089e49, type: 3}
-  m_Name: Applemoes
+  m_Script: {fileID: 11500000, guid: 96f782439087eaf409e67ea326fcfa01, type: 3}
+  m_Name: Saucystuff
   m_EditorClassIdentifier: 
-  name: Applemous
-  requiredItems:
-  - Apple
-  - Apple
-  - Sugar
+  dishName: Sauce
+  icon: {fileID: 21300000, guid: 1d2d24e2648cc144293533cd366c1e58, type: 3}
