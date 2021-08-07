@@ -11,7 +11,7 @@ public class ItemInfo : ScriptableObject
     [SerializeField]
     private Sprite icon;
 
-    public string DishName => itemName;
+    public string ItemName => itemName;
     
     public Sprite Icon => icon;
 }

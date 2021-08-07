@@ -21,7 +21,7 @@ public class DishUIManager : MonoBehaviour
 
     public void RemoveDish(ItemInfo dishToRemove)
     {
-        int dishIndex = currentObjectiveUIElements.FindIndex((dish) => dish.DishData.DishName == dishToRemove.DishName);
+        int dishIndex = currentObjectiveUIElements.FindIndex((dish) => dish.DishData.ItemName == dishToRemove.ItemName);
         if(dishIndex < 0)
         {
             return;

@@ -21,7 +21,7 @@ public class DishUI : MonoBehaviour
     public void SetDishInfo(ItemInfo data)
     {
         this.data = data;
-        dishName.SetText(data.DishName);
+        dishName.SetText(data.ItemName);
         dishIcon.sprite = data.Icon;
         // TODO FIX, data doesnt have requiredItems anymore.
         // ingredientsUI.SetIngredients(data.RequiredItems);
